@@ -1,0 +1,30 @@
+/*
+-- Query: SELECT * FROM aggregate.ent_group WHERE group_name LIKE "%alberta%"
+-- Date: 2022-05-28 16:18
+*/
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (211,'UniversityAlbertaFall20191','University Of Alberta Python Fall 2019 1',379,'2019-09-14 23:41:27','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (214,'UoA174Fall20191','University of Alberta Fall 2019 174 1',375,'2019-09-30 18:37:55','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (215,'UoA174Fall20192','University of Alberta Fall 2019 174 2',375,'2019-09-30 19:36:32','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (216,'UoA174Fall20193','University of Alberta Fall 2019 174 3',375,'2019-09-30 19:40:56','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (217,'UoA174Fall20194','University of Alberta Fall 2019 174 4',375,'2019-09-30 19:48:25','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (218,'UoA174Fall20195','University of Alberta Fall 2019 174 5',375,'2019-09-30 19:54:36','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (219,'UoA175Fall20191','University of Alberta Fall 2019 175 1',375,'2019-09-30 19:59:54','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (220,'UoA175Fall20192','University of Alberta Fall 2019 175 2',375,'2019-09-30 20:04:10','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (221,'UoA175Fall20193','University of Alberta Fall 2019 175 3',375,'2019-09-30 20:09:08','Fall',2019,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (241,'UoA174Spring20201','University of Alberta Spring 2020 174 1',375,'2020-01-06 23:51:51','Spring',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (242,'UoA174Spring20202','University of Alberta Spring 2020 174 2',375,'2020-01-07 00:05:27','Spring',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (243,'UoA174Spring20203','University of Alberta Spring 2020 174 3',375,'2020-01-07 00:06:46','Spring',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (244,'UoA175Spring20201','University of Alberta Spring 2020 175 1',375,'2020-01-07 00:17:41','Spring',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (245,'UoA175Spring20202','University of Alberta Spring 2020 175 2',375,'2020-01-07 00:17:58','Spring',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (246,'UoA175Spring20203','University of Alberta Spring 2020 175 3',375,'2020-01-07 00:19:07','Spring',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (247,'UoA175Spring20204','University of Alberta Spring 2020 175 4',375,'2020-01-07 00:23:29','Spring',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (248,'UoASpring2020175','University of Alberta Spring 2020 175',375,'2020-01-11 09:55:35','Spring',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (285,'UoA175Fall20201','University of Alberta Fall 2020 175 1',379,'2020-12-09 23:05:13','Fall',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (286,'UoA175Fall20202','University of Alberta Fall 2020 175 2',379,'2020-12-09 23:05:29','Fall',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (287,'UoA175Fall20203','University of Alberta Fall 2020 175 3',379,'2020-12-09 23:05:52','Fall',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (317,'CMPUT175Fall2021','CMPUT 175 University of Alberta Fall 2021',413,'2021-09-14 19:36:34','Fall',2021,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (324,'UoA174Fall20201','University of Alberta Fall 2020 174 1',379,'2022-01-26 13:44:55','Fall',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (325,'UoA174Fall20202','University of Alberta Fall 2020 174 2',379,'2022-01-26 13:47:12','Fall',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (326,'UoA174Fall20203','University of Alberta Fall 2020 174 3',379,'2022-01-26 13:47:30','Fall',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (327,'UoA174Fall20204','University of Alberta Fall 2020 174 4',379,'2022-01-26 23:22:53','Fall',2020,'admin');
+INSERT INTO `ent_group` (`id`,`group_id`,`group_name`,`course_id`,`creation_date`,`term`,`year`,`creator_id`) VALUES (331,'CMPUT175Spring2022','CMPUT 175 University of Alberta Spring 2022',422,'2022-05-08 21:35:53','Spring',2022,'admin');
