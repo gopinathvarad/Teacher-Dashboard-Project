@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block header %} | Dashboard {% endblock %}
+
+{% block jumbo_head %}{{ group.group_name }}{% endblock %}
+{% block jumbo_body %}{{SVC.topic_name}}{% endblock %}
+
+{% block content %}
+<div class="flex-grow-1 overflow-auto">
+    <div id='table_header' class='dash_row'>
+        <div class='cell-2'></div>
+        <div class='cell-2 default_bar'>Avg. Stud</div>
+        {% for user in users %}
+            <div id="col{{user.login}}" class='cell rotate_text_header addEllipsis default_bar' attempted="0" correct="0" onmouseover="ShowUserPopover('{{user.login}}')" onmouseleave="HideUserPopover('{{user.login}}')">
+                {{user.login}}
+            </div>
+        {% endfor %}
+    </div>
+
+    {% for activity in activities %}
+        <div id="actInfo{{activity.id}}" style='height:20px;' class='dash_row' maxAttempt="0">
+            <div id="row{{activity.id}}" class='cell-2 addEllipsis default_bar' onmouseover="ShowActivityPopover('{{activity.id}}')" onmouseleave="HideActivityPopover('{{activity.id}}')">
+                {{activity.display}}
+            </div>
+
+            <div id='average_student{{activity.id}}' class='cell-2 default_bar'>
+                <div class="cell-3 rotate"><div id="average_student{{activity.id}}_fail" class="progress-bar bg-danger" role="progressbar" count="0" submissions="0" style="height:10px; width:0%;"></div></div>
+                <div class="cell-3"><div id="average_student{{activity.id}}_success" class="progress-bar bg-success" role="progressbar" count="0" submissions="0" style="height:10px; width:0%;"></div></div>
+            </div>
+
+            {% for user in users %}
+                <a class="cell default_bar" id="row{{activity.id}}_col{{user.login}}" onmouseover="ShowPopover('{{activity.id}}','{{user.login}}')" onmouseleave="HidePopover('{{activity.id}}','{{user.login}}')">
+                    <div id="bar_row{{activity.id}}_col{{user.login}}" class="progress-bar bg-dark" role="progressbar" style="height: 10px; width:1%" count="0" correct="0" submissions=""></div>
+                </a>
+            {% endfor %}
+
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block notify %}
+    <div>
+        <h6>
+            <span class="badge badge-dark"><span id="notification_number">0</span> New!</span>
+        </h6>
+    </div>
+    <div id="toast_notifications_body"></div>
+{% endblock %}
+
+{% block concepts %}
+    <div class="row">
+        <h5 id="conceptTitle" class="addEllipsis">Concepts</h5>
+    </div>
+    <div id="concept_content">
+        {% for concept in concepts %}
+            <div id='conceptTable{{concept.id}}' class="cell default_bar rotate" style="width:10px; height:80px;" onmouseover='ShowConceptHover("{{concept.id}}")' onmouseleave='HideConceptHover("{{concept.id}}")'>
+                <div id="concept_bar{{concept.id}}" class="progress-bar" role="progressbar" style="transition:0.4s; background-color:#0D2E97; height: 0%; width:10px" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block script %}
+    {% load static %}
+    <script src="{% static 'js/dashboard.js' %}" type="text/javascript"></script>
+{% endblock %}

@@ -1,0 +1,80 @@
+.my_border {
+    border: 2px dotted black;
+
+}
+
+.dash_row {
+    white-space:nowrap;
+    margin-top: 5px;
+}
+.cell {
+    width: 25px;
+    margin: 2.5px;
+    display:inline-block;
+}
+.cell-2 {
+    width: 75px;
+    height: 100%;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    padding:0px;
+    display:inline-block;
+}
+.cell-3 {
+    width: 25px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding:0px;
+    display:inline-block;
+}
+
+.rotate
+{
+    transform: rotate(180deg);
+}
+.progress{
+    transform: rotate(180deg);
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition:0.4s;
+}
+.show_bar{
+    transition:0.4s;
+    opacity:1;
+}
+.default_bar{
+    transition:0.4s;
+    opacity:0.5;
+}
+.rotate_text_header{
+    transform: rotate(-10deg) translate(-10px,0px);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    height: 60px;
+}
+
+.addEllipsis {
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+#dashboard_table {
+    width: 100%;
+    overflow: scroll;
+}
+
+#concept_content {
+    overflow:scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: auto;
+    white-space:nowrap;
+}
+
+
+#toast_notifications_body {
+    height: 100px;
+    overflow-y:scroll;
+    -ms-overflow-style: auto;
+}

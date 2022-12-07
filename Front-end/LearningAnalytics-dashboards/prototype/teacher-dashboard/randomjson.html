@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://unpkg.com/d3-scale-cluster@1.1.7/dist/d3-scale-cluster.min.js"></script>
+ <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 40%;
+  height: 400px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 60%;
+  background-color: #f1f1f1;
+  height: 400px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h2>Teacher-Analytics Dashboard Main Hub</h2>
+
+<section>
+  <nav>
+    <h3>Panel 1</h3>
+  </nav>
+  
+  <article>
+    <h1>Panel2</h1>
+   
+  </article>
+</section>
+ <script>
+    // Feel free to change or delete any of the code you see in this editor!
+    
+   
+ 
+ var data = [];
+for(var j=1;j < 15;j++){
+  
+  for (var i = 0; i < 100; i++) {
+    var datas = {};
+    datas.weeks=j;
+    datas.students = i;
+
+    datas.percentage = Math.random() * 0.4;//random number from 0 to 0.4
+    data.push(datas);
+}
+}
+
+var randomjson = JSON.stringify(data);
+console.log(data);
+    const width =1800;
+    //total width
+    const height = width/10;
+    const margin = {"top": 100, "left": 20, "right": 1000, "bottom": 0};
+   
+    var nestByDisadvantage = d3.nest()
+      .key(function(d){ return d.students; })
+      .sortKeys(d3.ascending)
+      .entries(data);
+   
+    
+    
+   var percentages = [];
+    
+ 
+    
+    
+       data.forEach(function(d, i) {  
+      
+      percentages[i] = d.percentage;
+    
+    })
+  
+    
+    
+    //console.log(upperpercentages);
+    //console.log(nestByDisadvantage);
+  
+    var columnWidth = width/150;
+    
+    var maxPercentageSqrt = Math.sqrt(d3.max(data, function(d){ return d.percentage; }));
+   
+    var scale = d3.scaleLinear()
+    .domain([0,maxPercentageSqrt])
+    .range([0,(columnWidth/2)]);
+   
+    var colour = d3.scaleCluster()
+    .domain(percentages)
+   .range(['#f1eef6','#d4b9da','#c994c7','#df65b0','#e7298a','#ce1256','#91003f','#B0C4DE','#4169E1','#000080','  #00008B','#191970','#0000CD','#0000FF']);
+    
+  
+    
+    var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.right + margin.left)
+      .attr("height", height + margin.top + margin.bottom);
+    
+    var chart = svg.append("g")
+      .attr("transform", "translate(" + (margin.left) + "," + margin.top + ")");
+    
+    var columnHeader = chart.append("g")
+      .attr("transform", "translate(0,0)");
+    
+    var columnLabels = columnHeader.selectAll("g")
+      .data(nestByDisadvantage)
+      .enter()
+      .append("g")
+      .attr("transform", function(d, i) {return "translate(" + (columnWidth * i) +",0)"; });
+    
+    columnLabels.append("text")
+    .text(function(d) { return d.key })
+    .attr("transform", "translate(10)rotate(-45)")
+    .style("font-size", "6px")
+         
+    var nestByFamilyType = d3.nest()
+      .key(function(d){ return d.weeks; })
+      .sortKeys(d3.ascending)
+      .sortValues(function(a,b) { return a.disadvantage < b.disadvantage; })
+      .entries(data);
+    
+    //console.log(nestByFamilyType.length);
+    
+    var rowHeight = height/nestByFamilyType.length
+    
+    nestByFamilyType.forEach(function(d, i) {
+      
+      var rowG = chart.append("g")
+      .attr("transform", "translate(0," + (i * rowHeight) + ")");
+      
+      rowG.append("text")
+      .text(d.key)
+      .attr("x", 0)
+      .attr("y", rowHeight/2)
+      .style("text-anchor", "end")
+      .style("font-size", "11px")
+
+      var circles =  rowG.selectAll("g")
+      .data(d.values)
+      .enter()
+      .append("g")
+      .attr("transform", function(d, i) {return "translate(" + (columnWidth * i) +",0)"; });
+      
+      circles.append("circle")
+      .attr("cx", columnWidth/2)
+      .attr("cy", columnWidth/2)
+      .attr("r", function(d) { return scale(Math.sqrt(d.percentage)); })
+      .style("fill", function(d) { return colour(d.percentage); });
+
+      
+   
+      
+    });
+    
+
+  </script>
+ 
+</body>

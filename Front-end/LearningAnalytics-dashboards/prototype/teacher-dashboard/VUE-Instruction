@@ -1,0 +1,7 @@
+Instruction:
+1.	Install NodeJS
+2.	Go to the file director
+3.	Type:  npm i
+4.	Type:  npm run serve
+5.	After successfully compiled
+ Paste the local URL in the browser:

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %} | Loading Session  {% endblock %}
+
+{% block jumbo_head %} Loading in your session {% endblock %}
+{% block jumbo_body %} This can take a a few minutes to start up {% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <div class="spinner-border" role="status" style="color:#0D2E97;">
+      <span class="sr-only">Loading...</span>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    window.onload = function()
+    {
+        window.location.href = "{{redirect}}";
+    }
+</script>
+{% endblock %}

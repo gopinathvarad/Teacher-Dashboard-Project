@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #F5F5F5; */
+}
+
+html{
+  background-color: #F5F5F5;
+}
+
+.heatmap {
+  height: 200vh; 
+  width: 80%;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #FFF;
+  box-shadow: 5px 7px 12px 2px #9E9E9E;
+  transform: translateX(9.5rem);
+}
+
+.color-picker-grp {
+  display: block;
+  margin: auto;
+}
+
+.color-picker {
+  cursor: pointer;
+  width: 9rem;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+/* Select Menu */
+select {
+  height: 3rem;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+option {
+ padding-left: 2rem;
+}
+
+input[type="date"] {
+  height: 1rem;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #c6c6c6;
+  margin-bottom: 18px;
+  color: #888;
+  font-family: 'Lato', 'sans-serif';
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+/* Side Bar */
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+/* .fa {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size:20px;
+  cursor: pointer;
+  padding-top: 1rem;
+  margin: auto;
+} */
+
+.main-menu {
+background:#FFFFFF;
+box-shadow: 2px 2px 10px #888888;
+position:absolute;
+top:0;
+bottom:0;
+height: 70%;
+left:0;
+width: 60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+display: grid; 
+grid-template-columns: 5% 40% 55%; 
+column-gap: 3.5rem;
+}
+
+.main-menu--visible {
+  width: 700px;
+  overflow:visible;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.topic-selector {
+  margin: 1rem;
+}
+
+.topic-div {
+  margin-top: 5px;
+}
+
+.date-color-picker {
+  margin-top: 1rem;
+}
+
+.side-menu-icon {
+  width: 3.5rem;
+  cursor: pointer;
+  margin-right: 10rem;
+}
+
+.spinner{
+  transform: translate(50%, 100%);
+}
+
+.date-range{
+  width: inherit;
+  margin: auto;
+  transform: translateX(-.4rem);
+}
+
+input[type=date]{
+  font: inherit;
+  font-size: .9rem;
+}
+
+input[type=date]:focus{
+  outline: none !important;
+  border:1px solid #275D38;
+  transition: all .1s;
+}
+
+input[type=checkbox]{
+  width: 1.4em;
+  height: 1.4em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid #000;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  border: none;
+}
+
+input[type=checkbox]:checked{
+  /* background-color: #275D38; */
+  border: none;
+}
+
+.btn {
+  height: 2rem;
+  width: 10rem;
+  border: 1px solid #275D38;
+  background-color: #FFF;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin: 1rem 1rem 0 1.5rem; 
+}
+
+.btn-filter{
+  display: block;
+  margin: auto;
+  height: 2rem;
+  width: 10rem;
+  border: 1px solid #000;
+  background-color: #FFF;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.btn:hover, .btn-filter:hover{
+  background-color: #000;
+  color: #FFF;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+
+.btn--bg {
+  height: 2rem;
+  width: 20rem;
+  border: 1px solid #000;
+  background-color: #FFF;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin: 1rem 1rem 0 1.5rem; 
+}
+
+.btn--bg:hover{
+  background-color: #000;
+  color: #FFF;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.dropdown{
+  color: #FFF;
+}
+
+.dropdown-menu {
+  visibility: hidden;
+  transform: translateX(1.5rem);
+  height: 10rem;
+}
+
+.dropdown-menu--visible {
+  transform: translateX(1.5rem);
+  height: 10rem;
+  width: 80%;
+  margin: 0;
+  background-color: #2B2A2A;
+  visibility: visible;
+  transition: all .2s;
+  z-index:1;
+  position: relative;
+}
+
+.dropdown-menu--visible-bg {
+  transform: translateX(1.5rem);
+  height: 10rem;
+  width: 80%;
+  margin: 0;
+  background-color: #2B2A2A;
+  visibility: visible;
+  transition: all .2s;
+  z-index:1;
+  position: relative;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.dp-content {
+  display: block;
+  margin: auto;
+  width: 70%; 
+}
+
+.color-legend {
+  display: block;
+  margin: auto;
+  width: 80%; 
+  margin-bottom: 2rem;
+}
+
+.color-legend-title {
+  display: block;
+  margin: auto;
+  width: 70%; 
+}
+
+.header {
+  display: block;
+  margin: 2rem auto; 
+  width: 80%;
+}
+
+h2{
+  font-family: 'Varela Round', sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.col-container {
+  display: grid;
+  margin: 0 6rem;
+  grid-template-columns: 70% 30%; 
+}

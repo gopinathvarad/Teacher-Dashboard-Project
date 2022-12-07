@@ -1,0 +1,41 @@
+Background Information:
+
+In this section, we would like to gain some information about the people who took the survey. The background information includes age, gender, school/institute, teaching year, teaching courses/labs, etc. Based on current data, the courses they have been taught are basically programming-related courses. And around 88% of them have more than 40 students for each course (which may inflect that instructors can hardly know their students’ background of specific course or learning status in detail). As for the current pedagogical actions they use for their programming course, all of them use homework assignments, and almost 90% of them use online programming practice system. Meanwhile, over half of them adopts lab sessions, online lectures and flipped classroom to help teaching. In this way, we can know that analyzing data for homework assignment and online programming problems is essential to help instructors better understand students’ learning status.
+The common strategy instructors adopt when a student ask for help is discussing the problem, analyzing the responses with student via mail or in-person. Most of them are confident about current strategy about solving students’ problem. (Maybe add a discussion board for them to effectively discuss via teacher dashboard?)
+More than half of instructors have used learning analytics dashboard before and fount it helpful. And most of them have confident in interpreting students’ & classes’ progress by using learning analytics dashboard. Half of them think it’s somewhat easy to access the knowledge of class and students. Most of instructors find it difficult to gain information about the errors students made and misconceptions through dashboard. (In this way, maybe we could include sections such as common mistakes, success rate on concepts.)
+
+
+	Features need to assist on learning analytics dashboard
+
+Ranking:
+
+Class-related:
+We evaluated what type of support instructors would like to have on their teaching duties. Top 5 actions related to the whole class instructors would like to involve is: 1. Identifying who are the students at-risk (i.e., low performers) 2. Detecting the most common mistakes the overall class is making when solving the learning activities 3. Identifying the concepts (e.g., modulus, substring, if-else, for loop, etc.) that are being hard for students to grasp 4. Identifying subgroups of students facing similar problems in their learning process and 5. Exploring the most common responses submitted by students on each problem
+We can assume that the main goal for designing teacher dashboard system is to help instructor automatically group student (moderately useful) (common mistakes, misconceptions, time spent common responses, similar problems), alter student when they are at-risk.
+
+
+Student-related:
+
+How to identify students are at risk? Top 5: 1. Current score 2. Estimated level of knowledge at conceptual level 3. Number of attempts 4. Overall success rate 5. Number of mistakes.
+
+Top 5 data that can help instructors better understand students’ learning status:
+1.	Attempts 2. Common mistakes 3. Number of mistakes 4. Overall success rate 5. Current score
+
+Other features:
+Performances on lab/sessions value most, then is the performances on exams.
+
+More than 70% instructors want to control the system in some level. They would like to use the high-level aggregation data through their guidance, for example, based on the feature selection.
+
+
+	Evolution problem:
+Most (over 70%) of instructors think learning analytics dashboard should focus on most recent progress of students: last couple days or weeks.
+The aggregation unit should be grouping by semantic group or week.
+
+They don’t want to control students’ learning pace. If student should be notified, they want to notify students who are 1 standard deviation lagging from the mean.
+
+	Pedagogical actions:
+Feedback, Adjustment of students’ pace, Adjustment of learning materials, Additional instructions.
+
+Instructors feel confident interpreting graphs. They would like to have an option to swap between graphs and literalized data.
+
+

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block header %} | Create Session  {% endblock %}
+
+{% block jumbo_head %} Create your Session {% endblock %}
+{% block jumbo_body %} Select the group you want and the assignment to begin your teaching experience {% endblock %}
+
+{% block content %}
+    <form>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Select your Group</label>
+            <div class="col-sm-10">
+                <select id="groupSelect" class="form-control">
+                    <option value="N/A">--Select Group--</option>
+                    {% for class in group %}
+                        <option value="{{class.id}}">{{class.group_name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Select Assignments</label>
+            <div class="col-sm-10">
+                <select id="labSelect" class="form-control">
+                    <option>--Select Lab--</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm col-form-label">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                  <label class="custom-control-label" for="customSwitch1">Remote Mode</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <a id="btnCreate" class="btn disabled btn-primary">
+                    Create Session
+                </a>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+{% block script %}
+    {% load static %}
+    <script src="{% static 'js/createClass.js' %}" type="text/javascript"></script>
+{% endblock %}
