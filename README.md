@@ -1,6 +1,6 @@
 # Teacher-Dashboard-Project
 
-## This is the Code for the Teacher-Dashboard Project 
+## This is the Code for the Teacher-Dashboard Project. The Dashboard is developed using reactJS
 
 ### Screenshots of the Dashboard Pasted below 
 
